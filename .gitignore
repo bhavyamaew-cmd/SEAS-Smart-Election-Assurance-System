@@ -218,3 +218,25 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# SEAS project specific exclusions
+.env.*
+!.env.example
+
+# Databases and election data
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup files
+*.bak
+*.backup
+*_backup*
+*.zip
+
+# Frontend dependencies
+node_modules/
+
+# IDE settings
+.idea/
