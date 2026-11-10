@@ -1,15 +1,40 @@
-# SEAS Backend
+# SEAS – Smart Election Assurance System
 
-## Run
-1. `cd backend`
-2. `python -m venv venv`
-3. Windows: `venv\Scripts\activate`
-4. Linux/macOS: `source venv/bin/activate`
-5. `pip install -r requirements.txt`
-7. `uvicorn app.main:app --reload --host 0.0.0.0 --port 8000`
+## Overview
+SEAS (Smart Election Assurance System) is a technology-based election management project designed to support secure, transparent, and efficient election processes.
 
-API docs: `http://127.0.0.1:8000/docs`
+## Project Structure
 
-For another machine on the same network, set the frontend `window.SEAS_API_BASE_URL` to `http://SERVER_IP:8000/api` and set `CORS_ORIGINS` to the frontend origin.
+```text
+SEAS-Smart-Election-Assurance-System/
+├── backend/
+│   ├── app/
+│   │   ├── routers/
+│   │   ├── main.py
+│   │   ├── models.py
+│   │   ├── schemas.py
+│   │   ├── auth.py
+│   │   ├── database.py
+│   │   └── dependencies.py
+│   ├── requirements.txt
+│   └── README.md
+├── frontend/
+│   └── index.html
+├── .gitignore
+└── README.md
+```
 
-The SQLite database is `seas.db` in the backend working directory. Do not expose or commit `.env` or `seas.db`.
+## Technologies
+- Python
+- FastAPI
+- SQLite
+- HTML, CSS, and JavaScript
+
+## Setup
+For backend installation and execution instructions, see [Backend README](backend/README.md).
+
+## Security
+Sensitive credentials, environment files, databases, and voter information should not be committed to this repository.
+
+## Project Status
+Under development.
