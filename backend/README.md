@@ -11,10 +11,6 @@
 
 API docs: `http://127.0.0.1:8000/docs`
 
-Default development administrator:
-- username: `admin`
-- password: `admin123`
-
 For another machine on the same network, set the frontend `window.SEAS_API_BASE_URL` to `http://SERVER_IP:8000/api` and set `CORS_ORIGINS` to the frontend origin.
 
 The SQLite database is `seas.db` in the backend working directory. Do not expose or commit `.env` or `seas.db`.
