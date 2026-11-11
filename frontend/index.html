@@ -2791,7 +2791,7 @@ th{
 /* =====================================================
                     BACKEND API + AUTH
 ===================================================== */
-const API_BASE_URL = window.SEAS_API_BASE_URL || "http://127.0.0.1:8000/api";
+const API_BASE_URL = window.SEAS_API_BASE_URL || "http://seas-smart-election-assurance-system.onrender.com/api";
 let authToken = sessionStorage.getItem("seas_access_token") || "";
 let privacyEnabled = false;
 let qrRunning = false;
@@ -5980,7 +5980,7 @@ async function loadStates() {
     stateSelect.innerHTML = '<option value="">Select State</option>';
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/api/locations/states");
+        const response = await fetch("http://seas-smart-election-assurance-system.onrender.com/api/locations/states");
 
         if (!response.ok) {
             throw new Error("Failed to load states.");
@@ -6027,7 +6027,7 @@ document.getElementById("loginState").addEventListener("change", async function 
 
     try {
         const response = await fetch(
-            `http://127.0.0.1:8000/api/locations/districts?state_id=${stateId}`
+            `http://seas-smart-election-assurance-system.onrender.com/api/locations/districts?state_id=${stateId}`
         );
 
         if (!response.ok) {
@@ -6068,7 +6068,7 @@ document.getElementById("loginDistrict").addEventListener("change", async functi
 
     try {
         const response = await fetch(
-            `http://127.0.0.1:8000/api/locations/constituencies?district_id=${districtId}`
+            `http://seas-smart-election-assurance-system.onrender.com/api/locations/constituencies?district_id=${districtId}`
         );
 
         if (!response.ok) {
@@ -6108,7 +6108,7 @@ document.getElementById("loginConstituency").addEventListener("change", async fu
 
     try {
         const response = await fetch(
-            `http://127.0.0.1:8000/api/locations/areas?constituency_id=${constituencyId}`
+            `http://seas-smart-election-assurance-system.onrender.com/api/locations/areas?constituency_id=${constituencyId}`
         );
 
         if (!response.ok) {
@@ -6144,7 +6144,7 @@ document.getElementById("loginArea").addEventListener("change", async function (
 
     try {
         const response = await fetch(
-            `http://127.0.0.1:8000/api/locations/booths?area_id=${areaId}`
+            `http://seas-smart-election-assurance-system.onrender.com/api/locations/booths?area_id=${areaId}`
         );
 
         if (!response.ok) {
